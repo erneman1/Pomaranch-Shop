@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Pomaranch</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../static/img/logo.png" alt="logo">
+            </div>
+            <nav id="nav">
+                <ul class="menu">
+                    <li class="menu_item"><a :href="index" class="menu_link">
+                        Главная
+                    </a></li>
+                    <li class="menu_item"><a :href="shop" class="menu_link">
+                        Магазин
+                    </a></li>
+                    <li class="menu_item"><a :href="size" class="menu_link">
+                        Размеры
+                    </a></li>
+                    <li class="menu_item"><a :href="about" class="menu_link">
+                        О нас
+                    </a></li>
+                    <li class="menu_item"><a :href="contacts" class="menu_link">
+                        Контакты
+                    </a></li>
+                    <li class="menu_item"><a href="" class="menu_link">
+                        <div class="cart">
+                            <img src="../static/icons/cart_icon.png" alt="Cart">
+                        </div>
+                        <div class="amount">
+                            14
+                        </div>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="empty"></div>
+
+    <div class="social_side">
+        <a class="social_side_link" href="https://www.facebook.com/pomaranch.ua" target="_blanck">
+            <img src="../static/icons/facebook-logo.png" alt="">
+        </a>
+        <a class="social_side_link" href="https://www.instagram.com/pomaranch_shop/" target="_blanck">
+            <img src="../static/icons/instagram-logo.png" alt="">
+        </a>
+    </div>
+
+
+    <section class="size">
+        <div class="container wrapper">
+            <div class="left">
+                <div class="inner">
+
+                </div>
+            </div>
+            <div class="right">
+                <img src="../static/img/size-guide-imgjpg.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container wrapper">
+            <div class="blok">
+                <div class="block_title">
+                    Нужна помощь?
+                </div>
+                <ul class="info">
+
+                    <li class="info_item">
+                        <a href="#" class="info_link">
+                            Связаться с нами
+                        </a>
+                    </li>
+                    <li class="info_item">
+                        <a href="#" class="info_link">
+                            FAQs
+                        </a>
+                    </li>
+                    <li class="info_item">
+                        <a href="#" class="info_link">
+                            Уход за изделиями
+                        </a>
+                    </li>
+                </ul>
+            </div>
+           <div class="block">
+               <div class="block_title">
+                   Часы работы
+               </div>
+               <div class="time">
+                   10:00 - 21:00
+               </div>
+           </div>
+        </div>
+    </footer>
+    
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>

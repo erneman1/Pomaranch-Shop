@@ -1,0 +1,119 @@
+$bg_color: #ffdfc7
+$title_size: 3em
+$title_weight: 800
+
+*
+	font-family: 'Raleway', sans-serif
+	font-weight: 400
+a
+	&:hover
+		color: grey
+		transition: 0.3s
+html
+	background-color: $bg_color
+html, body
+	font-size: 16px
+	font-weight: 400
+.container
+	width: 90%
+	margin: 0 auto
+.wrapper
+	padding-top: 100px
+	background-color: #fff
+.left
+	width: 50%
+.right
+	width: 50%
+.inner
+	width: 50%
+	margin: 0 auto
+.title
+	font-size: $title_size
+	font-weight: $title_weight
+header
+	position: fixed
+	top: 0
+	display: flex
+	align-items: center
+	background-color: $bg_color
+	width: 100%
+	height: 70px
+	z-index: 90
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	.menu
+		display: flex
+		align-items: flex-end
+		&_item
+			margin-right: 35px
+			&:last-child
+				margin-right: 0
+		&_link
+			font-size: 1.3em
+			font-weight: 600
+			&:last-child
+				display: flex
+				justify-content: space-between
+				align-items: flex-end
+				.cart
+					margin-right: 5px
+					padding-bottom: 5px
+				img
+					width: 20px
+				.amount
+					font-weight: 400
+					font-size: 20px
+					font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+.empty
+	height: 70px
+.hamburger
+	display: none
+	position: fixed
+	width: 32px
+	height: 24px
+	top: 15px
+	right: 25px
+	z-index: 91
+	span
+		display: block
+		width: 100%
+		height: 3px
+		background-color: #000000
+		transition: 0.1s
+		&:nth-child(2)
+			margin: 7px 0
+.hamburger_active
+	span
+		&:nth-child(1)
+			transform: rotate(-45deg) translate(-6px, 6px)
+		&:nth-child(2)
+			display: none
+		&:nth-child(3)
+			transform: rotate(45deg) translate(5px, 3px)
+.social_side
+	width: 5%
+	position: fixed
+	display: flex
+	flex-direction: column
+	align-items: center
+	top: 50%
+	right: 0
+	a
+		&:nth-child(1)
+			margin-bottom: 35px
+.logo
+	max-width: 150px
+button
+	width: 100%
+	height: 80px
+	background-color: black
+	border: solid black 4px
+	color: white
+	font-size: 1.7em
+	transition: 0.3s
+	cursor: pointer
+	&:hover
+		background-color: #fff
+		color: black
