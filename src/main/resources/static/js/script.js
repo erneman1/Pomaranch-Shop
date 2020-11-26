@@ -15,3 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
+
+$(document).ready(function(){
+    $('.size_slider').slick({
+        prevArrow: '<button type="button" class="slick-prev"><img src="../static/icons/left-arrow.png" th:src="@{icons/left-arrow.png}"/></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="../static/icons/right-arrow.png" th:src="@{icons/right-arrow.png}"/></button>',
+    });
+  });

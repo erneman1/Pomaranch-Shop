@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pomaranchdb
-    username: ADMIN
-    password: ThePomaranch#2020
+    url: jdbc:postgresql://localhost:5432/pomaranch
+    username: postgres
+    password: 12345678
   jpa:
     hibernate:
       ddl-auto: create
@@ -11,9 +11,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
 
-  devtools:
-    restart:
-      exclude: META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties
-      enabled: true
-    livereload:
-      enabled: true
+#  devtools:
+#    restart:
+#      exclude: META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties
+#      enabled: true
+#    livereload:
+#      enabled: true

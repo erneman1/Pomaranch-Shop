@@ -1,102 +1,133 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="../static/css/normalize.css" th:href="@{/css/normalize.css}">
     <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
     <title>Pomaranch</title>
 </head>
 <body>
-    <header>
-    <div class="container">
-        <div class="logo">
-            <img src="../static/img/logo.png" alt="logo" th:src="@{/img/logo.png}">
-        </div>
-        <nav id="nav">
-            <ul class="menu">
-                <li class="menu_item"><a href="index.html" th:href="@{/home}" class="menu_link">
-                    Главная
-                </a></li>
-                <li class="menu_item"><a href="shop.html" th:href="@{/shop.html}" class="menu_link">
-                    Магазин
-                </a></li>
-                <li class="menu_item"><a href="size-guide.html" th:href="@{/size-guide}" class="menu_link">
-                    Размеры
-                </a></li>
-                <li class="menu_item"><a href="about.html" th:href="@{/about}" class="menu_link">
-                    О нас
-                </a></li>
-                <li class="menu_item"><a href="contacts.html" th:href="@{/contacts}" class="menu_link">
-                    Контакты
-                </a></li>
-                <li class="menu_item"><a href="#" class="menu_link">
-                    <div class="cart">
-                        <img src="../static/icons/cart_icon.png" th:src="@{/icons/cart_icon.png}" alt="Cart">
-                    </div>
-                    <div class="amount">
-                        14
-                    </div>
-                </a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-    <div class="empty"></div>
+<div th:insert="index :: header"></div>
 
-    <div class="social_side">
-        <a class="social_side_link" href="https://www.facebook.com/pomaranch.ua" target="_blanck">
-            <img src="../static/icons/facebook-logo.png" alt="">
-        </a>
-        <a class="social_side_link" href="https://www.instagram.com/pomaranch_shop/" target="_blanck">
-            <img src="../static/icons/instagram-logo.png" alt="">
-        </a>
-    </div>
+<div class="empty"></div>
 
-    <div class="title container wrapper">
-        Shop the collection
-    </div>
+<div class="social_side">
+    <a class="social_side_link" href="https://www.facebook.com/pomaranch.ua" target="_blanck">
+        <img src="../static/icons/facebook-logo.png" th:src="@{/icons/facebook-logo.png}" alt="">
+    </a>
+    <a class="social_side_link" href="https://www.instagram.com/pomaranch_shop/" target="_blanck">
+        <img src="../static/icons/instagram-logo.png" th:src="@{icons/instagram-logo.png}" alt="">
+    </a>
+</div>
 
+<div class="title container wrapper">
+    Shop the collection
+</div>
 
-
-    <footer>
-        <div class="container wrapper">
-            <div class="blok">
-                <div class="block_title">
-                    Нужна помощь?
-                </div>
-                <ul class="info">
-
-                    <li class="info_item">
-                        <a href="#" class="info_link">
-                            Связаться с нами
-                        </a>
-                    </li>
-                    <li class="info_item">
-                        <a href="#" class="info_link">
-                            FAQs
-                        </a>
-                    </li>
-                    <li class="info_item">
-                        <a href="#" class="info_link">
-                            Уход за изделиями
-                        </a>
-                    </li>
-                </ul>
+<section class="products_section">
+    <div class="container wrapper">
+        <div class="filters">
+            <div class="filters_title">
+                Фильтры
             </div>
-           <div class="block">
-               <div class="block_title">
-                   Часы работы
-               </div>
-               <div class="time">
-                   10:00 - 21:00
-               </div>
-           </div>
+            <hr>
+            <div class="filters_category gender">
+                <div class="filters_header">
+                    <div class="filters_subtitle">Пол</div>
+                    <div class="filters_plus">+</div>
+                </div>
+            </div>
+            <hr>
+            <div class="filters_category gender">
+                <div class="filters_header">
+                    <div class="filters_subtitle">Цена</div>
+                    <div class="filters_plus">+</div>
+                </div>
+            </div>
+            <hr>
+            <div class="filters_category gender">
+                <div class="filters_header">
+                    <div class="filters_subtitle">Тип</div>
+                    <div class="filters_plus">+</div>
+                </div>
+            </div>
+            <hr>
+            <div class="filters_category gender">
+                <div class="filters_header">
+                    <div class="filters_subtitle">Новые</div>
+                    <div class="filters_plus">+</div>
+                </div>
+            </div>
+            <hr>
         </div>
-    </footer>
-    <script src="../static/js/script.js"></script>
+        <div class="products">
+            <div class="sort">
+                <div class="custom_select">
+                    <select name="sort_list">
+                        <option>Сортировать:</option>
+                        <option>Самые новые</option>
+                        <option>Дешевле - Дороже</option>
+                        <option>Дороже - Дешевле</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products_list">
+
+                <div class="products_list_item" th:each="product : ${products}">
+                    <a href="#" th:href="@{/shop/details/{id}(id=${product.id})}">
+                        <div class="image">
+                            <img src="../static/img/promo_small_img.jpg" th:src="@{${product.picturePath}}" alt="image">
+                        </div>
+                        <div class="name" th:text="${product.name}">Cool dress</div>
+                        <div class="price" th:text="${'$' + product.price}">$10.0</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container wrapper">
+        <div class="blok">
+            <div class="block_title">
+                Нужна помощь?
+            </div>
+            <ul class="info">
+
+                <li class="info_item">
+                    <a href="#" class="info_link">
+                        Связаться с нами
+                    </a>
+                </li>
+                <li class="info_item">
+                    <a href="#" class="info_link">
+                        FAQs
+                    </a>
+                </li>
+                <li class="info_item">
+                    <a href="#" class="info_link">
+                        Уход за изделиями
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="block">
+            <div class="block_title">
+                Часы работы
+            </div>
+            <div class="time">
+                10:00 - 21:00
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../static/js/script.js" th:src="@{js/script.js}"></script>
 </body>
 </html>

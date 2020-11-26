@@ -19,7 +19,7 @@
             </div>  
             <nav id="nav">
                 <ul class="menu">
-                    <li class="menu_item"><a href="index.html" th:href="@{/home}" class="menu_link">
+                    <li class="menu_item"><a href="index.html" th:href="@{/}" class="menu_link">
                         Главная
                     </a></li>
                     <li class="menu_item"><a href="shop.html" th:href="@{/shop}" class="menu_link">
@@ -34,11 +34,11 @@
                     <li class="menu_item"><a href="contacts.html" th:href="@{/contacts}" class="menu_link">
                         Контакты
                     </a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">
+                    <li class="menu_item"><a href="#" th:href="@{/order/cart}" class="menu_link">
                         <div class="cart">
                             <img src="../static/icons/cart_icon.png" th:src="@{/icons/cart_icon.png}" alt="Cart">
                         </div>
-                        <div class="amount">
+                        <div class="amount" th:text="${session.order.orderItems.size()}">
                             14
                         </div>
                     </a></li>
@@ -84,7 +84,7 @@
                     <div class="promo_pic">
                         <img src="../static/img/promo_small_img.jpg" th:src="@{/img/promo_small_img.jpg}" alt="">
                     </div>
-                    <button>В магазин</button>
+                    <button th:href="@{/shop}">В магазин</button>
                 </div>
             </div>
             <div class="right">
@@ -196,6 +196,6 @@
            </div>
         </div>
     </footer>
-    <script src="../static/js/script.js"></script>
+    <script src="../static/js/script.js" th:src="@{js/script.js}"></script>
 </body>
 </html>
