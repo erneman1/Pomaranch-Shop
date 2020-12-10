@@ -8,6 +8,7 @@ public class PomaranchApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PomaranchApplication.class, args);
+
     }
 
 }

@@ -19,8 +19,8 @@ html, body {
 }
 
 .container {
-  width: 90%;
-  margin: 0 auto;
+  margin-left: 75px;
+  margin-right: 75px;
 }
 
 .wrapper {
@@ -61,6 +61,7 @@ header {
   z-index: 90;
 }
 header .container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,8 +152,12 @@ header .menu_link:last-child .amount {
 }
 
 .social_side {
-  width: 5%;
+  width: 75px;
   position: fixed;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,8 +168,6 @@ header .menu_link:last-child .amount {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 50%;
-  right: 0;
 }
 .social_side a:nth-child(1) {
   margin-bottom: 35px;
@@ -408,40 +411,52 @@ footer .container .time {
   display: flex;
 }
 
-hr {
-  margin-top: 30px;
-}
-
 .filters {
-  padding-left: 25px;
-  padding-right: 10px;
+  padding-left: 15px;
   width: 15%;
   height: 100vh;
 }
-.filters_title {
-  font-size: 1.5em;
-  font-weight: 600;
+.filters .show_btn {
+  height: 50px;
+  margin-top: 35px;
 }
-.filters_header {
-  line-height: 0;
+.filters hr {
+  margin: 0;
+}
+.filters_title {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.filters .category_header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
 }
-.filters_subtitle {
-  margin-top: 20px;
-  font-weight: 800;
+.filters .category_header .filters_subtitle {
+  font-size: 1.2em;
+  font-weight: 600;
 }
-.filters_plus {
-  color: gray;
+.filters .category_header .filters_plus {
   font-size: 2em;
-  font-weight: 400;
+}
+.filters .category .filters_body {
+  display: none;
+}
+.filters .category .filters_body ul {
+  padding: 0;
+}
+.filters .category .filters_body ul li {
+  margin-top: 15px;
+  font-weight: 600;
 }
 
 .products {

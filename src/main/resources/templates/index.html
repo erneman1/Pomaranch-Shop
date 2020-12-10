@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,11 +46,13 @@
             </nav>
         </div>
     </header>
+
     <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
+
     <div class="empty"></div>
 
     <div class="social_side">
@@ -84,7 +86,7 @@
                     <div class="promo_pic">
                         <img src="../static/img/promo_small_img.jpg" th:src="@{/img/promo_small_img.jpg}" alt="">
                     </div>
-                    <button th:href="@{/shop}">В магазин</button>
+                    <button id="toShopBtn">В магазин</button>
                 </div>
             </div>
             <div class="right">

@@ -18,22 +18,17 @@ public class OrderItem implements Serializable {
         this.product = product;
     }
 
-    public OrderItem(int quantity, Product product, Order order) {
-        this.quantity = quantity;
-        this.product = product;
-        this.order = order;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private int quantity;
     @ManyToOne
-    @JoinColumn(name = "productId")
+    @JoinColumn(name = "product_id")
     private Product product;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "order_id")
     private Order order;
+
     public BigDecimal subTotal() {
         return product.getPrice().multiply(BigDecimal.valueOf(quantity));
     }

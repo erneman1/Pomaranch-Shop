@@ -26,7 +26,9 @@ public class ShopController {
     @GetMapping("/details/{id}")
     public String getItem(@PathVariable long id, Model model){
         model.addAttribute("product", service.findById(id));
-        model.addAttribute("item", new ItemPair());
+        ItemPair pair = new ItemPair();
+        pair.setQuantity(1);
+        model.addAttribute("item", pair);
         return "item";
     }
 }

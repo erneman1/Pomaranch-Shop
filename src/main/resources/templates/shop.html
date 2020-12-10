@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="../static/js/jquery-3.5.1.js" th:src=""></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="../static/css/normalize.css" th:href="@{/css/normalize.css}">
@@ -36,34 +37,21 @@
                 Фильтры
             </div>
             <hr>
-            <div class="filters_category gender">
-                <div class="filters_header">
+            <div class="category" id="gender" onclick="openList('gender')">
+                <div class="category_header">
                     <div class="filters_subtitle">Пол</div>
                     <div class="filters_plus">+</div>
                 </div>
-            </div>
-            <hr>
-            <div class="filters_category gender">
-                <div class="filters_header">
-                    <div class="filters_subtitle">Цена</div>
-                    <div class="filters_plus">+</div>
+                <div class="filters_body" style="display: none">
+                    <ul>
+                        <li>Женщинам</li>
+                        <li>Мужчинам</li>
+                        <li>Детям</li>
+                    </ul>
                 </div>
             </div>
             <hr>
-            <div class="filters_category gender">
-                <div class="filters_header">
-                    <div class="filters_subtitle">Тип</div>
-                    <div class="filters_plus">+</div>
-                </div>
-            </div>
-            <hr>
-            <div class="filters_category gender">
-                <div class="filters_header">
-                    <div class="filters_subtitle">Новые</div>
-                    <div class="filters_plus">+</div>
-                </div>
-            </div>
-            <hr>
+
         </div>
         <div class="products">
             <div class="sort">

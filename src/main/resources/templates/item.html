@@ -50,7 +50,8 @@
                 th:object="${item}">
                     <label class="quantity">
                         Количество
-                        <input class="quantity_value" type="number" th:field="*{quantity}">
+                        <input class="quantity_value" min="1" value="1" type="number"
+                               th:field="*{quantity}">
                     </label>
                     <input type="hidden" th:value="${product.id}" th:attr="name='productId'">
                     <input class="button" type="submit" value="Добавить в корзину">
