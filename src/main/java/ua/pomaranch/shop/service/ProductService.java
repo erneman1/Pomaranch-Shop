@@ -23,7 +23,7 @@ public class ProductService {
         return repository.findAll();
     }
 
-    public Product findById(long id) {
+    public Product getById(long id) {
         return repository.findById(id).orElseThrow(() -> new ProductNotFoundException("Product not found"));
     }
 
@@ -31,11 +31,12 @@ public class ProductService {
         return repository.save(product);
     }
 
-    public void remove(Product product) {
+    public void delete(Product product) {
         repository.delete(product);
     }
 
     public void update(Product product) {
+
         repository.save(product);
     }
 

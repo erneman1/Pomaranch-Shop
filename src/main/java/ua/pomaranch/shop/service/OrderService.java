@@ -29,7 +29,7 @@ public class OrderService {
         orderRepository.delete(order);
     }
 
-    public void updateOrder(long id, Order newOrder){
+    public void updateOrder(long id, Order newOrder) {
         Order old = getOrderById(id);
         old.setOrderItems(newOrder.getOrderItems());
         orderRepository.save(old);
