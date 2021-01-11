@@ -24,19 +24,18 @@ public class ProductController {
         return productService.getById(id);
     }
 
-    @PostMapping
-    public void saveProduct(@ModelAttribute Product product) {
+    @PostMapping("/add")
+    public void saveProduct(@RequestBody Product product) {
         productService.save(product);
     }
 
-    @DeleteMapping
-    public void deleteProduct(@ModelAttribute Product product) {
+    @DeleteMapping("/delete")
+    public void deleteProduct(@RequestBody Product product) {
         productService.delete(product);
     }
 
-    @PutMapping
-    public void updateProduct(Product product){
-        productService.update(product);
+    @PutMapping("/update")
+    public void updateProduct(@RequestBody Product product) {
+        System.out.println(product);
     }
-
 }

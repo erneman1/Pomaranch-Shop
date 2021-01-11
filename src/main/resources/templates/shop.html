@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/normalize.css" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+
+    <script src="../static/js/jquery-3.5.1.js" th:src="@{/js/jquery-3.5.1.js}"></script>
+    <title>Pomaranch</title>
+
+</head>
+<body>
+
+<header th:insert="index :: #header">Header</header>
+
+<section class="shop_title"><h2>Наш магаизин</h2></section>
+<section id="headers">
+    <div class="container">
+        <div class="headers">
+            <h2 class="filter_title">Фильтры</h2>
+            <div class="sorting">
+                <h3>Сортировать</h3>
+                <ul class="sort_list">
+                    <li>Самые новые</li>
+                    <li>Дешевле - Дороже</li>
+                    <li>Дороже - Дешевле</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="content">
+    <div class="container sect">
+        <div class="filters">
+            <ul class="filters_title_list">
+<!--                Man filter-->
+                <li class="filters_title_list_item">
+                    <span class="man">Мужчинам</span>
+                    <ul class="sublist man_list">
+                        <li class="sublist_item">
+                            Рубашки
+                        </li>
+                        <li class="sublist_item">
+                            Свитшоты
+                        </li>
+                    </ul>
+                </li>
+<!--                Woman filter-->
+                <li class="filters_title_list_item">
+                    <span class="woman">Женщинам</span>
+                    <ul class="sublist woman_list">
+                        <li class="sublist_item">
+                            Рубашки/Блузы
+                        </li>
+                        <li class="sublist_item">
+                            Свитшоты
+                        </li>
+                        <li class="sublist_item">
+                            Платья
+                        </li>
+                        <li class="sublist_item">
+                            Юбки
+                        </li>
+
+                    </ul>
+                </li>
+<!--                Kids filter-->
+                <li class="filters_title_list_item">
+                    <span class="kids">Детям</span>
+                    <ul class="sublist kids_list">
+                            <li class="sublist_item">
+                                <span class="girl">Девочкам</span>
+                                <ul class="sublist girls">
+                                    <li class="sublist_item">Рубашки</li>
+                                    <li class="sublist_item">Платья</li>
+                                    <li class="sublist_item">Свитшоты</li>
+                                    <li class="sublist_item">Юбки</li>
+                                </ul>
+                            </li>
+                            <li class="sublist_item">
+                                <span class="boy">Мальчикам</span>
+                                <ul class="sublist boys">
+                                    <li class="sublist_item">Рубашки</li>
+                                    <li class="sublist_item">Свитшоты</li>
+                                </ul>
+                            </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div class="products">
+
+        </div>
+    </div>
+</section>
+<footer th:insert="index :: #footer">Footer</footer>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<script src="../static/js/shop.js" th:src="@{/js/shop.js}"></script>
+</body>
+</html>

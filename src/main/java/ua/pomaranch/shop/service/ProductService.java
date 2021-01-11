@@ -14,6 +14,8 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 
+import static ua.pomaranch.shop.util.Const.DEFAULT_DESCRIPTION;
+
 @Service
 @RequiredArgsConstructor
 public class ProductService {
@@ -42,11 +44,11 @@ public class ProductService {
 
     @PostConstruct
     private void initDB(){
-        save(new Product("Свитшот", "Sweetshot", "Very good and sweet sweetshot", BigDecimal.valueOf(15.00), LocalDate.now(), Const.SHIRT_IMG, 10, Category.KIDS));
-        save(new Product("Футболка", "T-Shirt", "Very good and sweet t-shirt", BigDecimal.valueOf(12.00), LocalDate.now(), Const.T_SHIRT_IMG, 5, Category.MAN));
-        save(new Product("Футболка", "T-Shirt", "Very good and sweet t-shirt", BigDecimal.valueOf(17.00), LocalDate.now(), Const.T_SHIRT2_IMG, 7, Category.MAN));
-        save(new Product("Рубашка", "Shirt", "Very good and beautiful t-shirt", BigDecimal.valueOf(8.00), LocalDate.now(), Const.T_SHIRT3_IMG, 8, Category.MAN));
-        save(new Product("Платье", "Dress", "Very good and sweet dress", BigDecimal.valueOf(13.00), LocalDate.now(), Const.DRESS_IMG, 20, Category.KIDS));
+//        save(new Product("Свитшот", "Sweetshot", DEFAULT_DESCRIPTION, BigDecimal.valueOf(15.00), LocalDate.now(), Const.SHIRT_IMG, 10, Category.KIDS));
+//        save(new Product("Футболка", "T-Shirt", DEFAULT_DESCRIPTION, BigDecimal.valueOf(12.00), LocalDate.now(), Const.T_SHIRT_IMG, 5, Category.MAN));
+//        save(new Product("Футболка", "T-Shirt", DEFAULT_DESCRIPTION, BigDecimal.valueOf(17.00), LocalDate.now(), Const.T_SHIRT2_IMG, 7, Category.MAN));
+//        save(new Product("Рубашка", "Shirt", DEFAULT_DESCRIPTION, BigDecimal.valueOf(8.00), LocalDate.now(), Const.T_SHIRT3_IMG, 8, Category.MAN));
+//        save(new Product("Платье", "Dress", DEFAULT_DESCRIPTION, BigDecimal.valueOf(13.00), LocalDate.now(), Const.DRESS_IMG, 20, Category.KIDS));
     }
 
 }

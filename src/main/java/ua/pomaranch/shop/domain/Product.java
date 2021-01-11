@@ -6,31 +6,18 @@ import lombok.NoArgsConstructor;
 import ua.pomaranch.shop.enums.Category;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Data
-public class Product implements Serializable {
-
-    public Product(String name, String type, String description, BigDecimal price, LocalDate localDate, String picturePath, int amount, Category category) {
-        this.name = name;
-        this.type = type;
-        this.description = description;
-        this.price = price;
-        this.localDate = localDate;
-        this.picturePath = picturePath;
-        this.amount = amount;
-        this.category = category;
-    }
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
     private long id;
+    @Column(name = "prod_name")
     private String name;
     private String type;
     private String description;
@@ -41,4 +28,22 @@ public class Product implements Serializable {
     @Enumerated(EnumType.STRING)
     private Category category;
 
+    public Product(
+            String name,
+            String type,
+            String description,
+            BigDecimal price,
+            LocalDate localDate,
+            String picturePath,
+            int amount,
+            Category category) {
+        this.name = name;
+        this.type = type;
+        this.description = description;
+        this.price = price;
+        this.localDate = localDate;
+        this.picturePath = picturePath;
+        this.amount = amount;
+        this.category = category;
+    }
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="../static/css/normalize.css" th:href="@{/css/normalize.css}" rel="stylesheet">
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+    <script src="../static/js/jquery-3.5.1.js" th:src="@{/js/jquery-3.5.1.js}"></script>
+    <title>Pomaranch</title>
+
+</head>
+<body>
+
+<header th:insert="index :: header">Header</header>
+
+<section class="product_item">
+    <div class="container">
+        <div class="left">
+            <div class="name"></div>
+            <div class="vendor"></div>
+            <div class="price"></div>
+            <div class="description"></div>
+            <div id="qs_block">
+                <label class="quantity_label">
+                    Количество
+                    <input id="quantity" type="number" value="1" min="1">
+                </label>
+                <label for="size" class="size_select_label">
+                    Размер
+                    <select id="size">
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </label>
+            </div>
+            <div class="button_block">
+                <button id="add_btn">Добавить в корзину</button>
+                <button id="buy_btn">Купить сразу</button>
+            </div>
+        </div>
+        <div class="right">
+            <img class="image" src="#" alt="Picture">
+        </div>
+    </div>
+</section>
+
+<footer th:insert="index :: #footer">Footer</footer>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<script src="../static/js/details.js" th:src="@{/js/details.js}"></script>
+</body>
+</html>

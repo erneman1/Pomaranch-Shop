@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="../static/css/normalize.css" th:href="@{/css/normalize.css}" rel="stylesheet">
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+    <script src="../static/js/jquery-3.5.1.js" th:src="@{/js/jquery-3.5.1.js}"></script>
+    <title>Pomaranch</title>
+</head>
+
+<body>
+
+<header id="header">
+    <div class="container head">
+        <a href="/" th:href="@{/}"><img src="../static/img/logo.png" th:src="@{/img/logo.png}" alt="logo"
+                                        class="logo"></a>
+        <nav class="navigation">
+            <ul class="navigation_list">
+                <li class="navigation_item"><a href="/">Главная</a></li>
+                <li class="navigation_item"><a href="/shop">Магазин</a></li>
+                <li class="navigation_item"><a href="/">Размеры</a></li>
+                <li class="navigation_item"><a href="/">О нас</a></li>
+                <li class="navigation_item"><a href="/">Контакты</a></li>
+                <li class="navigation_item cart">
+                    <a href="#"><img src="../static/icons/cart_icon.png" th:src ="@{/icons/cart_icon.png}" alt="cart"></a>
+                    <div class="count"></div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="banner">
+    <div class="container">
+        <div class="texts">
+            <h2>Combined experience</h2>
+            <h4>We have the know how you need</h4>
+        </div>
+        <img alt="banner" src="../static/img/banner.jpg" th:src="@{/img/banner.jpg}">
+    </div>
+</section>
+
+<section class="promo">
+    <div class="container sect">
+        <div class="left">
+            <img alt="promo img" src="../static/img/promo_big_img.jpg" th:src="@{/img/promo_big_img.jpg}">
+        </div>
+        <div class="right">
+            <p>В нашей одежде приятно ходить в любую погоду. Она будет защищать вас от погодных условий. А также она
+                поднимает настроение мягкостью матералов и приятным цветом. Никто не останеться равнодушным к нашей
+                одежде.</p>
+            <button class="lookBtn">Посмотреть</button>
+        </div>
+    </div>
+</section>
+
+<section class="brand">
+    <div class="container sect">
+        <div class="left">
+            <p>В нашей одежде приятно ходить в любую погоду. Она будет защищать вас от погодных условий. А также она
+                поднимает настроение мягкостью матералов и приятным цветом. Никто не останеться равнодушным к нашей
+                одежде.</p>
+            <button class="lookBtn">Посмотреть</button>
+        </div>
+        <div class="right">
+            <img alt="promo img" src="../static/img/newbrand_big.jpg" th:src="@{/img/newbrand_big.jpg}">
+        </div>
+    </div>
+</section>
+
+<section class="instagram">
+    <div class="container">
+        <h4>Мы в Instagram</h4>
+        <h6><a href="https://www.instagram.com/pomaranch_shop/?hl=ru" target="_blank">@Pomaranch</a></h6>
+        <div id="slider">
+            <div class="slider_item">
+                <img src="../static/img/060A6872.JPG" alt="img" th:src="@{/img/060A6872.JPG}">
+            </div>
+            <div class="slider_item">
+                <img src="../static/img/236A4971.jpg" alt="img" th:src="@{/img/236A4971.jpg}">
+            </div>
+            <div class="slider_item">
+                <img src="../static/img/IMG_8683.jpg" alt="img" th:src="@{/img/IMG_8683.jpg}">
+            </div>
+            <div class="slider_item">
+                <img src="../static/img/IMG_8714.jpg" alt="img" th:src="@{/img/IMG_8714.jpg}">
+            </div>
+        </div>
+        <p>Подпишись на наш аккаунт и будь всегда в курсе акций, распродаж и скидок.</p>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="container sect">
+        <div class="left">
+            <ul class="footer_list">
+                <li class="footer_list_item">Нужна помощ?</li>
+                <li class="footer_list_item"><a href="/">Связаться с нами</a></li>
+                <li class="footer_list_item"><a href="/">FAQs</a></li>
+                <li class="footer_list_item"><a href="/">Уход за изделием</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="footer_list">
+                <li class="footer_list_item">Часы работы:</li>
+                <li class="footer_list_item">10:00 - 21:00</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+</body>
+</html>
